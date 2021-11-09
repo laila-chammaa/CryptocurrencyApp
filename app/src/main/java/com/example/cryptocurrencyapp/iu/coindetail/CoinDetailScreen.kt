@@ -63,8 +63,10 @@ fun CoinDetailScreen(
                         }
                     }
                     Spacer(modifier = Modifier.height(15.dp))
-                    Text(text = "Team Members", style = MaterialTheme.typography.h3)
-                    Spacer(modifier = Modifier.height(15.dp))
+                    if (coin.team.isNotEmpty()) {
+                        Text(text = "Team Members", style = MaterialTheme.typography.h3)
+                        Spacer(modifier = Modifier.height(15.dp))
+                    }
                 }
                 items(coin.team) { teamMember ->
                     TeamListItem(

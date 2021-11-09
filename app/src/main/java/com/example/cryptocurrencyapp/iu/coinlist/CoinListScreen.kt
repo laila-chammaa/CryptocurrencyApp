@@ -28,6 +28,16 @@ fun CoinListScreen(
 
     Box(modifier = Modifier.fillMaxSize()) {
         LazyColumn(modifier = Modifier.fillMaxSize()) {
+            item {
+                Text(
+                    text = "The World of Crypto",
+                    style = MaterialTheme.typography.h1,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(20.dp)
+                        .align(Alignment.Center)
+                )
+            }
             items(state.coins) { coin ->
                 CoinListItem(
                     coin = coin,
